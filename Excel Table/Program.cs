@@ -8,31 +8,6 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace Excel_Table
 {
-    class Product
-    {
-        public string Name { get; set; }
-        private uint ProductID { get; set; }
-        private string Unit { get; set; }
-        private float Price { get; set; }
-    }
-    class Customer
-    {
-        public int Id { get; set; }
-        public string NameOfTheOrganization { get; set; }
-        public string Address { get; set; }
-        public string Name { get; set; }
-        public Product OrderedProduct { get; set; }
-        public List<Order> Orders { get; } = new List<Order>();
-    }
-    class Order
-    {
-        public int Id { get; set; }
-        public int ProductID { get; set; }
-        public int CustomerID { get; set; }
-        public int orderId { get; set; }
-        public int Quantity { get; set; }
-        public DateTime Date { get; set; }
-    }
     class Program
     {
 

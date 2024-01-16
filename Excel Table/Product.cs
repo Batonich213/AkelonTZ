@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Excel_Table
 {
-    internal class Product
+    class Product
     {
+        public string Name { get; set; }
+        private uint ProductID { get; set; }
+        private string Unit { get; set; }
+        private float Price { get; set; }
     }
 }
