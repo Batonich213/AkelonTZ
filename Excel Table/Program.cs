@@ -44,6 +44,8 @@ namespace Excel_Table
             {
                 Console.WriteLine("\n1. Вывести по наименованию товара информацию о клиентах, заказавших этот товар \n2. Изменить контактное лицо \n3. Показать золотого клиента с наибольшим количеством заказов за указанный год или месяц ");
                 string userSelection = Console.ReadLine();
+                Customer customer = new Customer();
+               
                 switch (Convert.ToInt16(userSelection))
                 {
                     case 1:
@@ -51,11 +53,12 @@ namespace Excel_Table
                         string productName = Console.ReadLine();
                         var worksheet = workbook.Worksheet(1);
                         var rows = worksheet.RowsUsed();
+                        
                         foreach (var row in rows)
                         {
                             if (row.Cell(2).Value.ToString() == productName)
                             {
-                                Console.WriteLine(row);
+                                
                             }
                         }
 
